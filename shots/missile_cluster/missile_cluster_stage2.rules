@@ -1,0 +1,154 @@
+﻿ID = "5000.vps_missile_cluster_stage2"
+Range = &<missile_cluster_stage1.rules>/Range
+IdealRange = &<missile_cluster_stage1.rules>/IdealRange
+Speed = 5
+
+Components
+{
+	Physics
+	{
+		Type = CirclePhysics
+		Radius = .2
+		Density = 0.1
+		LinearDamping = 0.1
+	}
+
+	Homing
+	{
+		Type = TargetHoming
+		TurnVelocity = 450d
+		Delay = 0.35
+		AvoidanceRaycastDistance = 0
+		VelocityCompensation = 85%
+	}
+
+	Retarget
+	{
+		Type = SameShipRetarget
+	}
+
+	Acceleration
+	{
+		Type = Acceleration
+		Acceleration = 40
+	}
+
+	NegativeAcceleration
+	{
+		Type = Acceleration
+		Acceleration = [40, -40]
+		AccelerationOverTime = [0, 8]
+		Direction = FrameOfReferenceVelocity
+	}
+
+	DeathByLifetime
+	{
+		Type = DeathByLifetime
+		Lifetime = 8
+		HasTarget = true
+	}
+
+	Sprite
+	{
+		Type = Sprite
+		Sprite
+		{
+			Texture
+			{
+				File = "missile_bomblet.png"
+				MipLevels = max
+			}
+			Size = [0.75, 0.25]
+		}
+
+		NormalsTexture
+		{
+			File = "missile_bomblet_normals.png"
+			MipLevels = max
+		}
+	}
+
+	MediaEffects
+	{
+		Type = MediaEffects
+		Offset = [-0.3, 0]
+		Rotation = 180d
+		MediaEffects
+		[
+			&<./Data/shots/missile_he/particles/missile_he_thruster_smoke.rules>
+			&<particles/missile_cluster_stage2_plume.rules>
+			&<./Data/shots/missile_he/particles/missile_he_thruster_plume_light.rules>
+		]
+	}
+
+	Targetable
+	{
+		Type = Targetable
+		Health = 200
+		TargetCategory = "missile"
+		OnDeath = &../Hit/HitFriendly
+	}
+
+	Hit
+	{
+		Type = SimpleHit
+		SourcePartCollisionDelay = 1.5/30
+
+		HitOperational
+		{
+			HitEffects
+			[
+				{
+					Type = ExplosiveDamage
+					TotalDamage = 2000
+					Radius = 3.5
+					Filter
+					{
+						Friendlies = true
+					}
+				}
+				{
+					Type = Impulse;
+					Impulse = 50;
+				}
+			]
+
+			MediaEffects
+			[
+				&<./Data/shots/missile_he/particles/missile_he_hit.rules>
+				&<./Data/shots/missile_he/particles/missile_he_flash.rules>
+
+				: /BASE_SOUNDS/AudioExterior
+				{
+					Sound = "./Data/shots/missile_he/sounds/launcher_rocket_impact_01.wav"
+					Volume = 1
+				}
+
+				: /BASE_SHAKE
+				{
+					ShakeAmount = .1
+					Duration = .5
+				}
+			]
+		}
+
+		HitShield = &HitOperational
+		HitStructural = &HitOperational
+
+		HitFriendly
+		{
+			MediaEffects
+			[
+				&<./Data/shots/missile_he/particles/missile_he_hit.rules>
+				&<./Data/shots/missile_he/particles/missile_he_flash.rules>
+
+				: /BASE_SOUNDS/AudioExterior
+				{
+					Sound = "./Data/shots/missile_he/sounds/launcher_rocket_impact_01.wav"
+					Volume = .6
+					SpeedVariation = .4
+				}
+			]
+		}
+	}
+}

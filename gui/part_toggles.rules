@@ -1,0 +1,134 @@
+﻿PartToggles
+[
+	{
+		ToggleID = "vps_roof_detail"
+		Style = Switch
+		ShowInEditor = true
+		Choices
+		[
+			{
+				ChoiceID = "vps_roof_detail_off"
+				ButtonToolTipKey = "PartToggles/VpsRoofDetail_Off"
+				ButtonSprite
+				{
+					Texture
+					{
+						File = "windows_off.png"
+						MipLevels = 2
+						SampleMode = Linear
+					}
+				}
+			}
+			{
+				ChoiceID = "vps_roof_detail_on"
+				ButtonToolTipKey = "PartToggles/VpsRoofDetail_On"
+				ButtonSprite
+				{
+					Texture
+					{
+						File = "windows_on.png"
+						MipLevels = 2
+						SampleMode = Linear
+					}
+				}
+			}
+		]
+	}
+	{
+		ToggleID = "vps_advanced_missile_type"
+		Style = Popout
+		ShowInEditor = true
+		Choices
+		[
+			{
+				ChoiceID = "vps_advanced_missile_type_he"
+				Mode = 0
+				ButtonToolTipKey = "PartToggles/MissileType_HE"
+				ButtonSprite
+				{
+					Texture
+					{
+						File = "missile_type_he.png"
+						MipLevels = 2
+						SampleMode = Linear
+					}
+				}
+			}
+			{
+				ChoiceID = "vps_advanced_missile_type_emp"
+				Mode = 1
+				ButtonToolTipKey = "PartToggles/MissileType_EMP"
+				ButtonSprite
+				{
+					Texture
+					{
+						File = "missile_type_emp.png"
+						MipLevels = 2
+						SampleMode = Linear
+					}
+				}
+			}
+			{
+				ChoiceID = "vps_advanced_missile_type_thermal"
+				Mode = 4
+				ButtonToolTipKey = "PartToggles/MissileType_Thermal"
+				ButtonSprite
+				{
+					Texture
+					{
+						File = "missile_type_thermal.png"
+						MipLevels = 2
+						SampleMode = Linear
+					}
+				}
+			}
+			{
+				ChoiceID = "vps_advanced_missile_type_nuke"
+				Mode = 2
+				ButtonToolTipKey = "PartToggles/MissileType_Nuke"
+				ButtonSprite
+				{
+					Texture
+					{
+						File = "missile_type_nuke.png"
+						MipLevels = 2
+						SampleMode = Linear
+					}
+				}
+			}
+			{
+				ChoiceID = "vps_advanced_missile_type_mine"
+				Mode = 3
+				ButtonToolTipKey = "PartToggles/MissileType_Mine"
+				ButtonSprite
+				{
+					Texture
+					{
+						File = "missile_type_mine.png"
+						MipLevels = 2
+						SampleMode = Linear
+					}
+				}
+			}
+			{
+				ChoiceID = "vps_advanced_missile_type_cluster"
+				Mode = 37
+				ButtonToolTipKey = "PartToggles/VpsAdvancedMissileType_Cluster"
+				ButtonSprite
+				{
+					Texture
+					{
+						File = "missile_type_cluster.png"
+						MipLevels = 2
+						SampleMode = Linear
+					}
+				}
+			}
+		]
+	}
+]
+
+
+
+
+

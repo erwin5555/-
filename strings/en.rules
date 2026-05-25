@@ -1,0 +1,89 @@
+﻿Parts
+{
+	PowerStorageSmall = "Small Capacitor"
+	PowerStorageSmallIcon = "Small Capacitor"
+	PowerStorageSmallDesc = "Compact battery capacitor designed to deal with remotely placed point defenses and maneuver thrusters."
+
+	VpsHyperAirlock = "Fire Airlock"
+	VpsHyperAirlockIcon = "Fire Airlock"
+	VpsHyperAirlockDesc = "A reinforced airlock with built-in fire suppression, helping contain fires where crew pass through."
+
+	VpsCorridorFireExtinguisher = "Wall-Mounted Fire Extinguisher"
+	VpsCorridorFireExtinguisherIcon = "Wall-Mounted Fire Extinguisher"
+	VpsCorridorFireExtinguisherDesc = &<./Data/strings/en.rules>/Parts/FireExtinguisherDesc
+
+	VpsBulkhead = "Blast Bulkhead"
+	VpsBulkheadIcon = "Blast Bulkhead"
+	VpsBulkheadDesc = "An armored internal airlock that slows crew movement while helping contain blast damage and fire spread."
+
+	VpsRadiatorDeck = "Deck Radiator"
+	VpsRadiatorDeckIcon = "Deck Radiator"
+	VpsRadiatorDeckDesc = "A roof-mounted radiator that can be installed away from the ship's exterior and connected to the heat pipe network."
+
+	HyperdriveMedium = "Compact Medium Hyperspace Drive"
+	HyperdriveMediumIcon = "Compact Medium Hyperspace Drive"
+	HyperdriveMediumDesc = "Allows the ship to instantaneously travel to other destinations within the solar system, to friendly ships with Hyperdrive Beacons, or when assisted by a Hyper-Jump Relay, to other solar systems.\n\nThis compact model stores 32 hyperium and takes 28 batteries to charge."
+
+	AdvancedMissileLauncher = "Large Missile Launcher"
+	AdvancedMissileLauncherIcon = "Large Missile Launcher"
+	AdvancedMissileLauncherDesc = "A larger, tougher missile launcher equipped with an autoloader and additional ammunition storage."
+
+	FlakC = "Deck Flak Cannon Array"
+	FlakCIcon = "Deck Flak Cannon Array"
+	FlakCDesc = "A deck-mounted flak cannon array using the same projectile interception behavior as the vanilla Flak Battery."
+
+	VpsRoofChaingun = "Roof-Mounted Chaingun"
+	VpsRoofChaingunIcon = "Roof Chaingun"
+	VpsRoofChaingunDesc = "A variant of the Chaingun mounted above the deck, allowing it to fire over nearby components. Additional ammunition magazines can be attached to increase its firing duration and rate of fire."
+
+	Structure1x4Wedge = "Structure 1x4 Wedge"
+	Structure1x4WedgeIcon = &Structure1x4Wedge
+	Structure1x4WedgeDesc = "The underlying structural frame that holds a ship together. Structure is automatically included with all rooms and corridors."
+
+	Armor1x4Wedge = "Armor 1x4 Wedge"
+	Armor1x4WedgeIcon = &Armor1x4Wedge
+	Armor1x4WedgeDesc = "Absorbs a great deal of enemy weapons fire, protecting a ship's juicy innards. Also acts as a \"lightning rod\" for E.M.P. effects."
+
+	Structure1x5Wedge = "Structure 1x5 Wedge"
+	Structure1x5WedgeIcon = &Structure1x5Wedge
+	Structure1x5WedgeDesc = &Structure1x4WedgeDesc
+
+	Armor1x5Wedge = "Armor 1x5 Wedge"
+	Armor1x5WedgeIcon = &Armor1x5Wedge
+	Armor1x5WedgeDesc = &Armor1x4WedgeDesc
+}
+
+MissileTypes
+{
+	VpsCluster = "Cluster Missiles"
+	VpsClusterDesc = "Guided missiles that release guided bomblets, saturating point defense and spreading damage across multiple areas."
+}
+
+Inputs
+{
+	PartToggles
+	{
+		vps_advanced_missile_type_he = "Advanced Launcher Type: HE"
+		vps_advanced_missile_type_emp = "Advanced Launcher Type: EMP"
+		vps_advanced_missile_type_thermal = "Advanced Launcher Type: Thermal"
+		vps_advanced_missile_type_nuke = "Advanced Launcher Type: Nuke"
+		vps_advanced_missile_type_mine = "Advanced Launcher Type: Mine"
+		vps_advanced_missile_type_cluster = "Advanced Launcher Type: Cluster"
+	}
+}
+
+PartToggles
+{
+	VpsRoofDetail_Off = "<b>Roof detail: <bad>hidden</bad></b>"
+	VpsRoofDetail_On = "<b>Roof detail: <good>shown</good></b>"
+	VpsAdvancedMissileType_Cluster = "<b><string id='MissileTypes/VpsCluster'/></b>\n\n<string id='MissileTypes/VpsClusterDesc'/>\n\nHotkey: <btn id='PartToggles.vps_advanced_missile_type_cluster'/>"
+}
+
+Stats
+{
+	VpsClusterMissileCapacityFmt = "<white>Cluster Missile Capacity:</white> <good>{0}</good>"
+}
+
+
+
+

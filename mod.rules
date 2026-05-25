@@ -1,0 +1,201 @@
+﻿ID = 5000.VPS
+Name = "原版风格部件库"
+Version = 0.0.45
+CompatibleGameVersions = ["0.30.4c"]
+ModifiesGameplay = true
+Author = "5000"
+Logo = "logo.png"
+Description = "原版风格的扩展部件库。添加小型电容器、消防气闸、防爆舱壁、壁挂灭火器、可通行无边框热管交叉、甲板散热器、紧凑中型超空间驱动、甲板高射炮阵列、屋顶链炮、楔形结构/装甲和大型导弹发射器集束导弹支持。"
+StringsFolder = "strings"
+
+Actions
+[
+	{
+		Action = Add
+		AddTo = "<ships/terran/conveyor/conveyor.rules>/Part"
+		OnlyIfNotExisting = true
+		IgnoreIfNotExisting = false
+		Name = ProhibitedBy
+		ToAdd : &<./Data/ships/base_part.rules>/Part/ProhibitedBy [need_wall]
+	}
+	{
+		Action = Add
+		AddTo = "<ships/terran/corridor/corridor.rules>/Part"
+		OnlyIfNotExisting = true
+		IgnoreIfNotExisting = false
+		Name = ProhibitedBy
+		ToAdd : &<./Data/ships/base_part.rules>/Part/ProhibitedBy [need_wall]
+	}
+	{
+		Action = AddMany
+		AddTo = "<ships/terran/terran.rules>/Terran/Parts"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = false
+		ManyToAdd = &<parts/parts.rules>/Parts
+	}
+	{
+		Action = AddMany
+		AddTo = "<modes/career/techs.rules>/Techs"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = false
+		ManyToAdd = &<parts/techs.rules>/Techs
+	}
+	{
+		Action = Add
+		AddTo = "<modes/career/techs.rules>/Techs/11/PartsUnlocked"
+		ToAdd = &<parts/Weapons/advanced_launcher/advanced_launcher.rules>/Part/ID
+	}
+	{
+		Action = AddMany
+		AddTo = "<modes/career/techs.rules>/Techs/11/ToggleChoicesUnlocked"
+		ManyToAdd = [[vps_advanced_missile_type, 0] [vps_advanced_missile_type, 37]]
+	}
+	{
+		Action = Add
+		AddTo = "<modes/career/techs.rules>/Techs/12/ToggleChoicesUnlocked"
+		ToAdd = [vps_advanced_missile_type, 1]
+	}
+	{
+		Action = Add
+		AddTo = "<modes/career/techs.rules>/Techs/13/ToggleChoicesUnlocked"
+		ToAdd = [vps_advanced_missile_type, 4]
+	}
+	{
+		Action = Add
+		AddTo = "<modes/career/techs.rules>/Techs/14/ToggleChoicesUnlocked"
+		ToAdd = [vps_advanced_missile_type, 2]
+	}
+	{
+		Action = Add
+		AddTo = "<modes/career/techs.rules>/Techs/15/ToggleChoicesUnlocked"
+		ToAdd = [vps_advanced_missile_type, 3]
+	}
+	{
+		Action = Add
+		AddTo = "<modes/career/techs.rules>/Techs/17/PartsUnlocked"
+		ToAdd = &<parts/Weapons/roof_chaingun/roofchaingun.rules>/Part/ID
+	}
+	{
+		Action = Add
+		AddTo = "<modes/career/techs.rules>/Techs/18/PartsUnlocked"
+		ToAdd = &<parts/Weapons/deck_flak_cannon_array/FlakC.rules>/Part/ID
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<ships/terran/heat_pipe_crossing/heat_pipe_crossing.rules>/Part"
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			TypeCategories = [heat_management, corridor]
+			NoAutoDoors = true
+			IsWalled = false
+			GeneratorRequiresDoor = false
+			CrewSpeedFactor
+			{
+				Up = 0.03
+				Left = .75
+				Right = .75
+				Down = 0.03
+			}
+			CrewCongestedSpeedFactor
+			{
+				Up = 0.03
+				Left = .66
+				Right = .66
+				Down = 0.03
+			}
+			ForceManhattanPathInPart = true
+			BlockedTravelCells
+			[
+				[0, -1]
+				[0, 1]
+			]
+			BlockedTravelCellDirections
+			[
+				{
+					Key = [0, -1]
+					Value = [Down]
+				}
+				{
+					Key = [0, 1]
+					Value = [Up]
+				}
+			]
+			ExternalWalls = [None]
+			ExternalWallsByCell
+			[
+				{
+					Key = [0, 0]
+					Value = [Left, TopLeft, Top, TopRight, Right, BottomRight, Bottom, BottomLeft]
+				}
+			]
+			InternalWalls = [None]
+			InternalWallsByCell
+			[
+				{
+					Key = [0, 0]
+					Value = [TopLeft, Top, TopRight, BottomRight, Bottom, BottomLeft]
+				}
+			]
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<ships/terran/heat_pipe_crossing/heat_pipe_crossing.rules>/Part/EditorIcon/Texture"
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			File = "parts/Thermal/borderless_heat_pipe_crossing/icon.png"
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<ships/terran/heat_pipe_crossing/heat_pipe_crossing.rules>/Part/Components/Graphics/Walls"
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			DamageLevels
+			[
+				{
+					File = "parts/Thermal/borderless_heat_pipe_crossing/walls.png"
+					Size = [1, 1]
+				}
+			]
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<ships/terran/heat_pipe_crossing/heat_pipe_crossing.rules>/Part/Components/Darkness_Graphics/NonOperationalDoodad"
+		IgnoreIfNotExisting = true
+		Overrides
+		{
+			DamageLevels
+			[
+				{
+					File = "parts/Thermal/borderless_heat_pipe_crossing/darkness.png"
+					Size = [1, 1]
+				}
+			]
+		}
+	}
+	{
+		Action = AddBase
+		AddBaseTo = "<ships/terran/heat_pipe_crossing/heat_pipe_crossing.rules>/Part/Components"
+		IgnoreIfNotExisting = false
+		BaseToAdd = &<parts/Thermal/borderless_heat_pipe_crossing/heat_pipe_crossing_components.rules>
+	}
+	{
+		Action = AddMany
+		AddTo = "<gui/game/parts/part_toggles.rules>/PartToggles"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = false
+		ManyToAdd = &<gui/part_toggles.rules>/PartToggles
+	}
+	{
+		Action = AddMany
+		AddTo = "<gui/game/parts/part_stats.rules>/PartStats"
+		CreateIfNotExisting = false
+		IgnoreIfNotExisting = false
+		ManyToAdd = &<gui/part_stats.rules>/PartStats
+	}
+]

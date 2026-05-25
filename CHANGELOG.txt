@@ -1,0 +1,174 @@
+V0.0.45 - 23 MAY 2026
+
+Removed the Ty.FlakC legacy alias from the Deck Flak Cannon Array to avoid duplicate part IDs when the original Ty.Flak mod is still enabled.
+
+------------------------------------------
+
+V0.0.44 - 23 MAY 2026
+
+Integrated the Deck Flak Cannon Array into the Vanilla-style Parts Library.
+Placed it under the vanilla Flak Battery editor entry and unlock tech, while preserving compatibility with the old Ty.FlakC part ID.
+
+------------------------------------------
+
+V0.0.43 - 23 MAY 2026
+
+Restored the Blast Bulkhead door-generation, wall blending, and visual behavior to match Bulkheads so doors do not need to be placed manually.
+Kept the Bulkheads visual assets while preserving the adjusted explosive resistance, EMP resistance, and crew movement speed.
+
+------------------------------------------
+
+V0.0.42 - 23 MAY 2026
+
+Removed 5000 branding from in-game part display names.
+Renamed the Hyper Airlock to Fire Airlock / 消防气闸 and adjusted its description to better match vanilla-style naming.
+
+------------------------------------------
+
+V0.0.41 - 23 MAY 2026
+
+Adjusted the 5000 Blast Bulkhead to use Bulkheads visuals with Borderless Bulkheads gameplay behavior.
+Set explosive resistance to 55% and crew movement speed to 85%.
+
+------------------------------------------
+
+V0.0.40 - 23 MAY 2026
+
+Integrated the passable borderless heat pipe crossing from Borderless Bulkheads and Pipes.
+The vanilla heat pipe crossing now uses corridor-style passability and the borderless crossing visuals.
+
+------------------------------------------
+
+V0.0.39 - 23 MAY 2026
+
+Added the 5000 Blast Bulkhead.
+It uses the Borderless Bulkheads visual assets with Bulkheads-style gameplay data and improved explosive resistance.
+
+------------------------------------------
+
+V0.0.38 - 23 MAY 2026
+
+Moved the 1x4/1x5 Wedge Structure and 1x4/1x5 Wedge Armor entries into the vanilla Armor editor grouping.
+All four now attach directly under vanilla Armor.
+
+------------------------------------------
+
+V0.0.37 - 23 MAY 2026
+
+Changed the Large Missile Launcher and Roof-Mounted Chaingun career unlocks to follow the vanilla railgun pattern.
+They are now added to the vanilla Missile Launcher and Chaingun tech unlock lists instead of using separate standalone tech entries.
+Large Missile Launcher missile-type choices now unlock alongside the matching vanilla missile-type techs.
+
+------------------------------------------
+
+V0.0.36 - 23 MAY 2026
+
+Changed the 1x4 and 1x5 Wedge Structure and Wedge Armor editor placement to follow the vanilla railgun child-part pattern.
+They now chain through EditorParentParts only, avoiding duplicate standalone Structure entries.
+
+------------------------------------------
+
+V0.0.35 - 23 MAY 2026
+
+Changed the 1x4 and 1x5 Wedge Armor editor grouping to match vanilla wedge armor.
+They now use the Structure editor group and attach under vanilla Armor instead of acting as separate Defenses entries.
+
+------------------------------------------
+
+V0.0.34 - 23 MAY 2026
+
+Changed the Large Missile Launcher and Roof-Mounted Chaingun career tech grouping to reference the vanilla Missile Launcher and Chaingun groups.
+Removed their local EditorGroup fields so their editor placement follows the vanilla child-part pattern more closely.
+
+------------------------------------------
+
+V0.0.33 - 23 MAY 2026
+
+Restored the Large Missile Launcher and Roof-Mounted Chaingun EditorGroup fields while keeping their vanilla parent-part grouping.
+This matches vanilla child-part style and fixes the career tech tree reference crash.
+
+------------------------------------------
+
+V0.0.32 - 23 MAY 2026
+
+Moved the Large Missile Launcher into the vanilla Missile Launcher editor group.
+Moved the Roof-Mounted Chaingun into the vanilla Chaingun editor group.
+
+------------------------------------------
+
+V0.0.31 - 23 MAY 2026
+
+Changed the 1x4 and 1x5 Wedge Armor editor grouping to match vanilla Armor.
+They now appear in both Defenses and Structure, while avoiding stacking in the Structure group.
+
+------------------------------------------
+
+V0.0.30 - 23 MAY 2026
+
+Restored the Wedge Armor editor visibility by removing invalid EditorParentParts links from the 1x4 and 1x5 Wedge Armor.
+Removed invalid EditorParentParts links from the Large Missile Launcher and Roof-Mounted Chaingun because they do not provide reliable build-menu insertion after vanilla parts.
+
+------------------------------------------
+
+V0.0.29 - 23 MAY 2026
+
+Moved the Roof-Mounted Chaingun editor placement after the vanilla Chaingun.
+
+------------------------------------------
+
+V0.0.28 - 23 MAY 2026
+
+Renamed the Advanced Missile Launcher to Large Missile Launcher / 大型导弹发射器.
+Moved the Large Missile Launcher editor placement after the vanilla Missile Launcher.
+
+------------------------------------------
+
+V0.0.27 - 23 MAY 2026
+
+Moved the 1x4 and 1x5 Wedge Structure editor placement after the vanilla 1x3 Wedge Structure.
+The 1x5 Wedge Structure now follows the 1x4 Wedge Structure in the build menu.
+
+------------------------------------------
+
+V0.0.26 - 23 MAY 2026
+
+Moved the 1x4 and 1x5 Wedge Armor editor placement after the vanilla 1x3 Wedge Armor.
+The 1x5 Wedge Armor now follows the 1x4 Wedge Armor in the build menu.
+
+------------------------------------------
+
+V0.0.25 - 23 MAY 2026
+
+Moved the 5000 Hyper Airlock and 5000 Wall-Mounted Fire Extinguisher out of the Crew parts group.
+They now appear with the door and corridor controls, matching the placement style used by bulkhead-style internal passage parts.
+
+------------------------------------------
+
+V0.0.24 - 23 MAY 2026
+
+Added the 5000 Deck Radiator to the Thermal parts group.
+Integrated only the deck radiator from More Deck Cannons.
+Changed the integrated part ID to 5000.vps_radiator_deck for the Vanilla-style Parts Library.
+Moved the editor placement after the vanilla Radiator instead of the original cannon mod parts.
+Removed the deck radiator's forward tile occlusion limit and kept the adjusted 1x4 footprint.
+Added English and Simplified Chinese strings.
+
+------------------------------------------
+
+V0.0.23 - 23 MAY 2026
+
+Added the 5000 Wall-Mounted Fire Extinguisher to the Crew parts group.
+Integrated the corridor and conveyor wall-placement restrictions required by the part.
+Changed the integrated part ID to 5000.vps_corridor_fire_extinguisher for the Vanilla-style Parts Library.
+Added English and Simplified Chinese strings.
+
+------------------------------------------
+
+V0.0.22 - 18 MAY 2026
+
+Added the Hyper Airlock to the Crew parts group.
+Changed the integrated part ID to 5000.vps_hyper_airlock for the Vanilla-style Parts Library.
+Renamed the integrated part to 5000 Hyper Airlock / 5000 超能气闸.
+Added English and Simplified Chinese strings for the Hyper Airlock.
+
+------------------------------------------

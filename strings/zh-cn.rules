@@ -1,0 +1,94 @@
+﻿__Name = "简体中文"
+__DebugOnly = false
+// The above 2 lines *MUST* be the first two lines of the file!
+
+Parts
+{
+	PowerStorageSmall = "小型电容器"
+	PowerStorageSmallIcon = "小型电容器"
+	PowerStorageSmallDesc = "小型电容器，适合给远程放置的点防御和机动推进器供电。"
+
+	VpsHyperAirlock = "消防气闸"
+	VpsHyperAirlockIcon = "消防气闸"
+	VpsHyperAirlockDesc = "内置灭火系统的强化气闸，可在船员通行处帮助抑制火势蔓延。"
+
+	VpsCorridorFireExtinguisher = "壁挂灭火器"
+	VpsCorridorFireExtinguisherIcon = "壁挂灭火器"
+	VpsCorridorFireExtinguisherDesc = &<./Data/strings/zh-cn.rules>/Parts/FireExtinguisherDesc
+
+	VpsBulkhead = "防爆舱壁"
+	VpsBulkheadIcon = "防爆舱壁"
+	VpsBulkheadDesc = "强化内部气闸，可减缓船员通行速度，并帮助阻隔爆炸伤害与火势扩散。"
+
+	VpsRadiatorDeck = "甲板散热器"
+	VpsRadiatorDeckIcon = "甲板散热器"
+	VpsRadiatorDeckDesc = "安装在舰船甲板上的散热器，可远离舰船外缘布置，并连接至热管网络。"
+
+	HyperdriveMedium = "紧凑中型超空间驱动"
+	HyperdriveMediumIcon = "紧凑中型超空间驱动"
+	HyperdriveMediumDesc = "允许舰船瞬间前往恒星系内的其他地点、带有超空间信标的友方舰船，或在超空间中继器辅助下前往其他恒星系。\n\n此紧凑型号可储存 32 单位超空间燃料，充能需要 28 格电池。"
+
+	AdvancedMissileLauncher = "大型导弹发射器"
+	AdvancedMissileLauncherIcon = "大型导弹发射器"
+	AdvancedMissileLauncherDesc = "更大、更坚固的导弹发射器，配备自动装弹机和额外弹药储存空间。"
+
+	FlakC = "甲板高射炮阵列"
+	FlakCIcon = "甲板高射炮阵列"
+	FlakCDesc = "安装在甲板上的高射炮阵列，使用与原版高射炮阵列相同的弹幕拦截逻辑。"
+
+	VpsRoofChaingun = "屋顶链炮"
+	VpsRoofChaingunIcon = "屋顶链炮"
+	VpsRoofChaingunDesc = "安装在甲板上方的链炮变体，可以越过附近部件射击。可连接额外弹药舱，以延长持续射击时间并提高射速。"
+
+	Structure1x4Wedge = "结构（1x4 楔形）"
+	Structure1x4WedgeIcon = "结构（1x4 楔形）"
+	Structure1x4WedgeDesc = 支撑一艘星舰的底层结构框架。结构自动包含在所有房间和走廊中。
+
+	Armor1x4Wedge = "1x4 楔形装甲"
+	Armor1x4WedgeIcon = "1x4 楔形装甲"
+	Armor1x4WedgeDesc = 可吸收大量敌军火力，保护星舰脆弱的内部。也可充当应对电磁脉冲的“避雷针”。
+
+	Structure1x5Wedge = "结构（1x5 楔形）"
+	Structure1x5WedgeIcon = "结构（1x5 楔形）"
+	Structure1x5WedgeDesc = &Structure1x4WedgeDesc
+
+	Armor1x5Wedge = "1x5 楔形装甲"
+	Armor1x5WedgeIcon = "1x5 楔形装甲"
+	Armor1x5WedgeDesc = &Armor1x4WedgeDesc
+}
+
+MissileTypes
+{
+	VpsCluster = "集束导弹"
+	VpsClusterDesc = "制导导弹，命中前会释放制导小炸弹，用密集弹幕压制点防御并在多个区域扩散伤害。"
+}
+
+Inputs
+{
+	PartToggles
+	{
+		vps_advanced_missile_type_he = "高级发射器类型：高爆"
+		vps_advanced_missile_type_emp = "高级发射器类型：EMP"
+		vps_advanced_missile_type_thermal = "高级发射器类型：热罐"
+		vps_advanced_missile_type_nuke = "高级发射器类型：核弹"
+		vps_advanced_missile_type_mine = "高级发射器类型：地雷"
+		vps_advanced_missile_type_cluster = "高级发射器类型：集束"
+	}
+}
+
+PartToggles
+{
+	VpsRoofDetail_Off = "<b>屋顶细节：<bad>隐藏</bad></b>"
+	VpsRoofDetail_On = "<b>屋顶细节：<good>显示</good></b>"
+	VpsAdvancedMissileType_Cluster = "<b><string id='MissileTypes/VpsCluster'/></b>\n\n<string id='MissileTypes/VpsClusterDesc'/>\n\n热键：<btn id='PartToggles.vps_advanced_missile_type_cluster'/>"
+}
+
+Stats
+{
+	VpsClusterMissileCapacityFmt = "<white>集束导弹容量：</white><good>{0}</good>"
+}
+
+
+
+
+

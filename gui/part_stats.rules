@@ -1,0 +1,7 @@
+﻿PartStats
+[
+	{
+		ID = VpsClusterMissileCapacity
+		FormatKey = "Stats/VpsClusterMissileCapacityFmt"
+	}
+]
